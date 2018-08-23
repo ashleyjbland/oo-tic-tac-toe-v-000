@@ -45,6 +45,14 @@ def valid_move?(index)
   end
 end
 
+def turn_count
+  @board.count{|player_token| player_token == "X" || player_token == "O"}
+end
+
+def current_player
+  turn_count % 2 == 0 ? "X" : "O"
+end
+
 def turn
   puts "Please enter 1-9:"
   input = gets.strip
@@ -58,16 +66,7 @@ def turn
   end
 end
 
-def turn_count
-  @board.count{|player_token| player_token == "X" || player_token == "O"}
-end
-
-def current_player
-  turn_count % 2 == 0 ? "X" : "O"
-end
-
-
-def won?(board)
+def won?
     WIN_COMBINATIONS.detect do |win_combination|
 
       win_index_1 = win_combination[0]
