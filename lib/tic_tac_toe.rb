@@ -26,7 +26,7 @@ class TicTacToe
  end
 
  def input_to_index(input)
-   gets string.to_i - 1
+   gets.chop - 1
  end
 
  def move(board, player_token= "X")
