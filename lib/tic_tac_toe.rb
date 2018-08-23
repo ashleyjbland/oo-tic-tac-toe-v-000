@@ -31,14 +31,84 @@ class TicTacToe
 
  def move(index, player_token= "X")
   @board[index] == player_token
+end
  end
+
+ def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
+
+def valid_move?(board, index)
+  if position_taken?(board, index) == false && (index >= 0 && index <= 8)
+    true
+  else
+    false
+  end
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index, current_player(board))
+    display_board(board)
+  else
+    turn(board)
+  end
+end
+
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
 
   def current_player
      turn_count % 2 == 0 ? "X" : "O"
   end 
 
-  def turn_count(board)
-    board.count{|token| token == "X" || token == "O"}
+  def won?(board)
+      WIN_COMBINATIONS.detect do |win_combination|
+
+        win_index_1 = win_combination[0]
+        win_index_2 = win_combination[1]
+        win_index_3 = win_combination[2]
+
+        position_1 = board[win_index_1]
+        position_2 = board[win_index_2]
+        position_3 = board[win_index_3]
+
+        (position_1 == "X" && position_2 == "X" && position_3 == "X") ||
+          (position_1 == "O" && position_2 == "O" && position_3 == "O")
+
+
+    end
   end
+
+  def full?(board)
+    if board.all? {|index| index != " "}
+      true
+    else
+      false
+    end
+  end
+
+  def draw?(board)
+    !won?(board) && full?(board)
+  end
+
+  def over?(board)
+    if won?(board) || full?(board) || draw?(board)
+      true
+    else
+      false
+    end
+  end
+
+  def winner(board)
+    if won?(board)
+      return board[won?(board)[0]]
+    end
+  end
+
   end
 end
