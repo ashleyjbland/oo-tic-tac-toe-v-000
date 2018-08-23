@@ -111,7 +111,7 @@ end
   end
 end
 
-def play
+ def play
   input.gets
 
   until over? == true
