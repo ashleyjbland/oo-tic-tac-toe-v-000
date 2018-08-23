@@ -30,7 +30,7 @@ class TicTacToe
  end
 
  def move(board, player_token= "X")
-  @board.find {|v| v == player_token}
+  @board.include? player_token
 
 end
 
@@ -39,7 +39,7 @@ end
   end 
 
   def turn_count
-     @board.count{|token| token == "X" || token == "O"}
+
    end
   end
 end
