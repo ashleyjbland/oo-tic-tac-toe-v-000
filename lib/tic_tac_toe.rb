@@ -110,3 +110,27 @@ end
     end
   end
 end
+
+def play
+
+  until over? == true
+    turn
+  end
+
+  if winner
+    puts "Congratulations #{winner(board)}!"
+  elsif draw? == true
+    puts "Cat's Game!"
+  end
+
+  until over?
+    turn
+  end
+  if won?
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?
+    puts "Cats Game!"
+  else
+    play
+    end
+end
