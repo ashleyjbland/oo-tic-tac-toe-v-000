@@ -29,9 +29,9 @@ class TicTacToe
    input.to_i - 1
  end
 
- def move(board, player_token= "X")
-   board.detect {|b| b.board == player_token}  
- end
+ def move(board, current_player= "X")
+  board = current_player
+end
 
   def current_player
      turn_count % 2 == 0 ? "X" : "O"
