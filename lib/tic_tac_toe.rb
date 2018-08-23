@@ -30,7 +30,7 @@ class TicTacToe
  end
 
  def move(board, player_token= "X")
-  @board[index] == player_token
+  @board.find {|v| v == player_token}
 
 end
 
