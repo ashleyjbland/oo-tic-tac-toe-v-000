@@ -122,7 +122,7 @@ end
   elsif draw? == true
     puts "Cat's Game!"
   end
-
+end
   until over?
     turn
   end
