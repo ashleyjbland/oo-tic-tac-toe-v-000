@@ -32,7 +32,7 @@ class TicTacToe
  def move(index, player_token= "X")
   @board[index] == player_token
  end
-end
+
 
 
  def position_taken?(board, index)
