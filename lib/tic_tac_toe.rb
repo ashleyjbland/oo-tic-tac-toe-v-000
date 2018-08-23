@@ -30,7 +30,7 @@ class TicTacToe
  end
 
  def move(board, player_token= "X")
-   player_token = @board
+   @board == player_token
    #places the player's move on the board
  end
 
