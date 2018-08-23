@@ -51,7 +51,8 @@ def turn
   index = input_to_index(input)
   if valid_move?(index)
     current_player
-    display_board(move(index, player_token= "X"))
+    display_board
+    move(index, player_token= "X")
   else
     turn
   end
