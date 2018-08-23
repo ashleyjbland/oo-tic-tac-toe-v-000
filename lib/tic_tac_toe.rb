@@ -130,8 +130,6 @@ end
     puts "Congratulations #{winner(board)}!"
   elsif draw?
     puts "Cats Game!"
-  else
-    play
     end
   end
 end
