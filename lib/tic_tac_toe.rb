@@ -84,28 +84,28 @@ def won?
   end
 end
 
-  def full?(board)
-    if board.all? {|index| index != " "}
+  def full?
+    if @board.all? {|index| index != " "}
       true
     else
       false
     end
   end
 
-  def draw?(board)
-    !won?(board) && full?(board)
+  def draw?
+    !won? && full?
   end
 
-  def over?(board)
-    if won?(board) || full?(board) || draw?(board)
+  def over?
+    if won? || full? || draw?
       true
     else
       false
     end
   end
 
-  def winner(board)
-    if won?(board)
+  def winner
+    if won?
       return board[won?(board)[0]]
     end
   end
