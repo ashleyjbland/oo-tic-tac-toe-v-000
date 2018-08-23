@@ -120,7 +120,7 @@ end
   elsif draw? == true
     puts "Cat's Game!"
   else
-    play
+    turn
   end
   end
 end
