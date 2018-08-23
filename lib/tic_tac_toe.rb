@@ -30,7 +30,7 @@ class TicTacToe
  end
 
  def move(board, player_token= "X")
-   @board.detect {|i| i.player_token == player_token}  
+   @board.detect {|i| i.board == player_token}  
  end
 
   def current_player
