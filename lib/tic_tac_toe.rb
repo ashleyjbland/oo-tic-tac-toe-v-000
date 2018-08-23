@@ -114,8 +114,8 @@ end
   until over? == true
     turn
   end
-  
-  if winner
+
+  if winner == true
     puts "Congratulations #{winner}!"
   elsif draw? == true
     puts "Cat's Game!"
