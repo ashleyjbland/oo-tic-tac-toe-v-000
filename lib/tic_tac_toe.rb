@@ -115,10 +115,12 @@ end
     turn
   end
 
-  if winner == true
+  if winner
     puts "Congratulations #{winner}!"
   elsif draw? == true
     puts "Cat's Game!"
+  else
+    play
   end
   end
 end
