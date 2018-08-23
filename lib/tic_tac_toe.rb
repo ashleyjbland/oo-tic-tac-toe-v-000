@@ -30,7 +30,7 @@ class TicTacToe
  end
 
  def move(index, player_token= "X")
-  array[index] == player_token
+  board[index] == player_token
 
 end
 
