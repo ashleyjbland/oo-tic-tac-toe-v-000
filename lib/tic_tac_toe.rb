@@ -122,7 +122,7 @@ end
   elsif draw? == true
     puts "Cat's Game!"
   end
-  
+
   if won?
     puts "Congratulations #{winner}!"
   elsif draw?
