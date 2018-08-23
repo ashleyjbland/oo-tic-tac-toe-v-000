@@ -65,23 +65,23 @@ def current_player
   turn_count % 2 == 0 ? "X" : "O"
 end 
 
-  def won?(board)
-      WIN_COMBINATIONS.detect do |win_combination|
+def won?(board)
+  WIN_COMBINATIONS.detect do |win_combination|
 
-        win_index_1 = win_combination[0]
-        win_index_2 = win_combination[1]
-        win_index_3 = win_combination[2]
+    win_index_1 = win_combination[0]
+    win_index_2 = win_combination[1]
+    win_index_3 = win_combination[2]
 
-        position_1 = board[win_index_1]
-        position_2 = board[win_index_2]
-        position_3 = board[win_index_3]
+    position_1 = board[win_index_1]
+    position_2 = board[win_index_2]
+    position_3 = board[win_index_3]
 
         (position_1 == "X" && position_2 == "X" && position_3 == "X") ||
           (position_1 == "O" && position_2 == "O" && position_3 == "O")
 
 
-    end
   end
+end
 
   def full?(board)
     if board.all? {|index| index != " "}
