@@ -111,7 +111,7 @@ end
   end
 
  def play
-  input = gets.strip
+  input = gets
 
   until over? == true
     turn
