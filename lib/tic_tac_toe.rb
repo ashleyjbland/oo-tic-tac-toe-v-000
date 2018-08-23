@@ -108,6 +108,4 @@ end
       return board[won?(board)[0]]
     end
   end
-
- end
 end
