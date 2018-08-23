@@ -109,7 +109,6 @@ end
       return @board[won?[0]]
     end
   end
-end
 
  def play
   input.gets
