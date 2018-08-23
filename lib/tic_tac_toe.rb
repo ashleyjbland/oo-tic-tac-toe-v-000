@@ -31,8 +31,7 @@ class TicTacToe
 
  def move(index, player_token= "X")
   @board[index] == player_token
-
-end
+ end
 
   def current_player
      turn_count % 2 == 0 ? "X" : "O"
